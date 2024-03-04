@@ -76,19 +76,20 @@ fun CardTitle(name: String, title: String, imagePainter: Painter, modifier: Modi
             painter = imagePainter,
             contentDescription = null,
             modifier = Modifier
-                .background(Color.Blue)
+                .background(color = colorResource(R.color.blueandroid))
                 .height(100.dp)
                 .width(100.dp)
         )
         Text(
             text = name,
             fontSize = 46.sp,
-            fontWeight = FontWeight.Bold
+
         )
         Text(
             text = title,
+            fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.Green
+            color = colorResource(R.color.androidgreen)
 
 
         )
@@ -119,7 +120,7 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
                 text = emailId,
                 textAlign = TextAlign.Justify,
                 modifier = Modifier
-                    .padding(bottom = 50.dp)
+                    .padding(bottom = 45.dp)
             )
 
     }
