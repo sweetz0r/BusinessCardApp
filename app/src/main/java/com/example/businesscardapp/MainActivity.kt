@@ -13,6 +13,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Email
+import androidx.compose.material.icons.rounded.Phone
+import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -95,26 +99,51 @@ fun CardTitle(name: String, title: String, imagePainter: Painter, modifier: Modi
         )
     }
 }
+
 @Composable
 fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Row {
+            Icon(
+                imageVector = Icons.Rounded.Phone,
+                contentDescription = "Phone",
+                tint = colorResource(R.color.androidgreen),
+                modifier = Modifier
+                    .padding(end = 5.dp)
 
+            )
             Text(
                 text = phonenumb,
                 textAlign = TextAlign.Justify,
                 modifier = Modifier
                     .padding(bottom = 12.dp)
-
+            )
+        }
+        Row {
+            Icon(
+                imageVector = Icons.Rounded.Share,
+                contentDescription = "Share",
+                tint = colorResource(R.color.androidgreen),
+                modifier = Modifier
+                    .padding(end = 5.dp)
             )
             Text(
                 text = socMedia,
                 textAlign = TextAlign.Justify,
                 modifier = Modifier
                     .padding(bottom = 12.dp)
-
+            )
+        }
+        Row {
+            Icon(
+                imageVector = Icons.Rounded.Email,
+                contentDescription = "email",
+                tint = colorResource(R.color.androidgreen),
+                modifier = Modifier
+                    .padding(end = 5.dp)
             )
             Text(
                 text = emailId,
@@ -122,9 +151,10 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
                 modifier = Modifier
                     .padding(bottom = 45.dp)
             )
-
+        }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
