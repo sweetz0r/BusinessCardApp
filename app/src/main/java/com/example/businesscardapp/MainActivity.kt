@@ -104,7 +104,9 @@ fun CardTitle(name: String, title: String, imagePainter: Painter, modifier: Modi
 fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.Start,
+        modifier = Modifier
+            .padding(start = 120.dp)
     ) {
         Row {
             Icon(
@@ -112,7 +114,7 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
                 contentDescription = "Phone",
                 tint = colorResource(R.color.androidgreen),
                 modifier = Modifier
-                    .padding(end = 5.dp)
+                    .padding(end = 16.dp)
 
             )
             Text(
@@ -128,7 +130,7 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
                 contentDescription = "Share",
                 tint = colorResource(R.color.androidgreen),
                 modifier = Modifier
-                    .padding(end = 5.dp)
+                    .padding(end = 16.dp)
             )
             Text(
                 text = socMedia,
@@ -143,7 +145,7 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
                 contentDescription = "email",
                 tint = colorResource(R.color.androidgreen),
                 modifier = Modifier
-                    .padding(end = 5.dp)
+                    .padding(end = 16.dp)
             )
             Text(
                 text = emailId,
