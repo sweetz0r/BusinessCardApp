@@ -6,8 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -102,57 +104,68 @@ fun CardTitle(name: String, title: String, imagePainter: Painter, modifier: Modi
 
 @Composable
 fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifier: Modifier = Modifier) {
-    Column(
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.Start,
-        modifier = Modifier
-            .padding(start = 110.dp)
-    ) {
-        Row {
-            Icon(
-                imageVector = Icons.Rounded.Phone,
-                contentDescription = "Phone",
-                tint = colorResource(R.color.androidgreen),
-                modifier = Modifier
-                    .padding(end = 16.dp)
 
-            )
-            Text(
-                text = phonenumb,
-                textAlign = TextAlign.Justify,
-                modifier = Modifier
-                    .padding(bottom = 12.dp)
-            )
-        }
-        Row {
-            Icon(
-                imageVector = Icons.Rounded.Share,
-                contentDescription = "Share",
-                tint = colorResource(R.color.androidgreen),
-                modifier = Modifier
-                    .padding(end = 16.dp)
-            )
-            Text(
-                text = socMedia,
-                textAlign = TextAlign.Justify,
-                modifier = Modifier
-                    .padding(bottom = 12.dp)
-            )
-        }
-        Row {
-            Icon(
-                imageVector = Icons.Rounded.Email,
-                contentDescription = "email",
-                tint = colorResource(R.color.androidgreen),
-                modifier = Modifier
-                    .padding(end = 16.dp)
-            )
-            Text(
-                text = emailId,
-                textAlign = TextAlign.Justify,
-                modifier = Modifier
-                    .padding(bottom = 45.dp)
-            )
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Bottom
+
+    ) {
+        Column(
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.Start,
+            //modifier = Modifier
+                //.padding(start = 110.dp)
+        ) {
+            Row {
+                Icon(
+                    imageVector = Icons.Rounded.Phone,
+                    contentDescription = "Phone",
+                    tint = colorResource(R.color.androidgreen),
+                    modifier = Modifier
+                        .padding(end = 16.dp)
+
+                )
+                Text(
+                    text = phonenumb,
+                    textAlign = TextAlign.Justify,
+                    modifier = Modifier
+                        .padding(bottom = 12.dp)
+                )
+            }
+            Row {
+                Icon(
+                    imageVector = Icons.Rounded.Share,
+                    contentDescription = "Share",
+                    tint = colorResource(R.color.androidgreen),
+                    //modifier = Modifier
+                    //.padding(end = 16.dp)
+                )
+                Spacer(
+                    modifier = Modifier
+                        .width(16.dp)
+                )
+                Text(
+                    text = socMedia,
+                    textAlign = TextAlign.Justify,
+                    modifier = Modifier
+                        .padding(bottom = 12.dp)
+                )
+            }
+            Row {
+                Icon(
+                    imageVector = Icons.Rounded.Email,
+                    contentDescription = "email",
+                    tint = colorResource(R.color.androidgreen),
+                    modifier = Modifier
+                        .padding(end = 16.dp)
+                )
+                Text(
+                    text = emailId,
+                    textAlign = TextAlign.Justify,
+                    modifier = Modifier
+                        .padding(bottom = 45.dp)
+                )
+            }
         }
     }
 }
