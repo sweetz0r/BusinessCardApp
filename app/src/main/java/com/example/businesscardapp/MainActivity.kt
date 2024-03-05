@@ -62,8 +62,8 @@ fun CardApp() {
     )
     CardDescription(
         phonenumb = "+7(999)-999-99-99",
-        socMedia = "@Sucker",
-        emailId = "Sucker@gmail.com")
+        socMedia = "@sweetz0r",
+        emailId = "sweetzr16@gmail.com")
 }
 
 @Composable
@@ -106,7 +106,7 @@ fun CardDescription(phonenumb: String, socMedia: String, emailId: String,modifie
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.Start,
         modifier = Modifier
-            .padding(start = 120.dp)
+            .padding(start = 110.dp)
     ) {
         Row {
             Icon(
